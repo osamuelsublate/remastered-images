@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "backend",
+      "runtimeExecutable": "/home/sublate/projects/remastered-images/.venv/bin/uvicorn",
+      "runtimeArgs": ["app.main:app", "--reload", "--port", "8000"],
+      "cwd": "/home/sublate/projects/remastered-images/backend",
+      "port": 8000
+    },
+    {
+      "name": "frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/home/sublate/projects/remastered-images/frontend",
+      "port": 5173
+    }
+  ]
+}

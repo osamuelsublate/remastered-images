@@ -1,0 +1,1 @@
+minimalist flat design, pure black background, a single glowing orange node-connection icon (two circles linked by a line, like the n8n logo style) centered in the upper third, soft orange glow around it, large bold white sans-serif text below reading "5 hacks do n8n", lots of negative space, no extra elements, clean tech aesthetic, 1080x1350 vertical

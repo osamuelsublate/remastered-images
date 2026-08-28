@@ -1,0 +1,26 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated carousels (images + state)
+backend/data/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Remotion (compositions + renderer)
+remotion/node_modules/
+remotion/bundle/
+remotion/out/
+
+# OS
+.DS_Store
+
+# Testes
+.pytest_cache/

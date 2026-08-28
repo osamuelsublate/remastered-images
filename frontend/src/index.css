@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+/*
+ * Carousel Studio — Design tokens (single source of truth).
+ * Naming maps to Tailwind v4 utilities: --color-surface -> bg-surface,
+ * --color-fg-muted -> text-fg-muted, etc. Opacity modifiers (bg-primary/15)
+ * work on every color token below.
+ */
+@theme {
+  /* Neutrals (dark) — page < surface < surface-2 < surface-3, then line */
+  --color-bg: #0a0a0a;
+  --color-surface: #121214;
+  --color-surface-2: #18181b;
+  --color-surface-3: #1f1f23;
+  --color-line: #2a2a2e;
+
+  /* Foreground — contrast verified on --color-surface (>= 4.5:1) */
+  --color-fg: #f4f4f5; /* primary text  ~17:1 */
+  --color-fg-muted: #a1a1aa; /* secondary text ~6.9:1 */
+  --color-fg-subtle: #8b8b92; /* tertiary/hints/placeholder ~5.2:1 */
+
+  /* Brand / primary — reserved for the single primary action + brand accents */
+  --color-primary: #ff6b1a; /* black text on top = 7.4:1 */
+  --color-primary-press: #e85d10;
+
+  /* Semantic — one meaning each */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-info: #60a5fa;
+
+  /* Type — honest system stack (no web font is shipped; see DESIGN_SYSTEM.md
+     for the optional self-hosted Inter upgrade). */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+
+  /* Radius scale — controls=md, panels/cards=xl, pills=full */
+  --radius-md: 0.625rem; /* 10px */
+  --radius-lg: 0.875rem; /* 14px */
+  --radius-xl: 1rem; /* 16px */
+}
+
+:root {
+  /* Elevation — sober, no colored glow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+
+  /* Motion — durations live in Tailwind's duration-150/200/300 utilities */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(
+    1100px 700px at 80% -15%,
+    #16161a 0%,
+    var(--color-bg) 60%
+  );
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a40;
+}
